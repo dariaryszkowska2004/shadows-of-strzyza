@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* =======================
+   BACKGROUND
+======================= */
+body {
+    background:
+        linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)),
+        url("img/tlo.jpg") no-repeat center top;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #222;
+}
+
+/* =======================
+   NAVIGATION
+======================= */
+.top-nav {
+    background: linear-gradient(to bottom, #2a2a2a, #1c1c1c);
+}
+
+.top-nav nav {
+    display: flex;
+    width: 100%;
+}
+
+.top-nav a {
+    flex: 1;
+    text-align: center;
+    padding: 18px 0;
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 17px;
+    border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+.top-nav a:last-child {
+    border-right: none;
+}
+
+.top-nav a:hover {
+    background: rgba(255,255,255,0.06);
+}
+
+/* =======================
+   LAYOUT
+======================= */
+.layout {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 80px;
+}
+
+/* =======================
+   PAGE TITLE
+======================= */
+.page-title {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+/* =======================
+   HERO (MAIN SECTION)
+======================= */
+.hero {
+    display: grid;
+    grid-template-columns: 2fr 1.2fr;
+    gap: 70px;
+    align-items: stretch;
+}
+
+/* =======================
+   POSTER
+======================= */
+.poster-box {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.poster-box img {
+    height: 100%;
+    width: auto;
+    max-width: 800px;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+/* =======================
+   RIGHT COLUMN
+======================= */
+.right-column {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* LOGO */
+.hero-logo {
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+    object-fit: contain;
+}
+
+/* DESCRIPTION CARD */
+.description {
+    flex: 1;
+    background: rgba(255,255,255,0.85);
+    padding: 40px;
+    border-radius: 10px;
+    font-size: 19px;
+    line-height: 1.9;
+}
+
+.description p {
+    margin-bottom: 22px;
+}
+
+/* =======================
+   TEXT PAGES (ABOUT / HISTORY / SCHEDULE / PARTNERS / CONTACT)
+======================= */
+.text-page {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 45px 55px;
+    background: rgba(255,255,255,0.88);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.text-page h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 42px;
+}
+
+/* =======================
+   SPONSORS
+======================= */
+.sponsors {
+    margin-top: 80px;
+    padding: 50px 80px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    
+}
+
+.sponsors img {
+    max-height: 160px;
+    max-width: 280px;
+}
+
+.text-page ul {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 40px;   /* ← TO JEST WCIĘCIE KROPEK */
+}
+
+.text-page li {
+    margin-bottom: 12px;
+}
+
+.text-page {
+    margin-bottom: 0;
+}
+.text-page p {
+    margin-bottom: 14px; /* lekki, estetyczny odstęp */
+}
+.contact-map {
+    display: block;
+    margin: 30px auto 0 auto;
+    max-width: 100%;
+    border-radius: 12px;
+}
+/* ===== HISTORY IMAGES FIX ===== */
+
+.history-images {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.history-images img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 768px) {
+
+    .top-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .top-nav a {
+        font-size: 14px;
+        padding: 8px 10px;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .hero,
+    .poster-box,
+    .history-layout {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    .poster-box img {
+        width: 90%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    .right-column,
+    .description,
+    .text-page,
+    .content-box {
+        width: 95%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .text-page p,
+    .text-page li {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    h1 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .history-images {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .sponsors {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px 10px;
+    }
+
+    .sponsors img {
+        max-width: 120px;
+        height: auto;
+    }
+}
